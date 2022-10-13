@@ -32,11 +32,21 @@ def time(n,func):
 		times.append(end-start)
 	return times
 
+def timeC(n):
+	times = []
+	f = Person(0)
+	for i in n:
+		start = pc()
+		f.set(i)
+		f.fib()
+		end = pc()
+		times.append(end-start)
+	return times
+
 
 def main():
 	
-	nlist = [i for i in range(30,45)]
-	f = Person(20)
+	nlist = [i for i in range(30,35)]
 
 	py_times = []
 	num_times = []
@@ -51,7 +61,7 @@ def main():
 	print('Done')
 
 	print('Starting fib_cpp')
-	cpp_times = time(nlist, f.fib)
+	cpp_times = timeC(nlist)
 	print('Done')
 
 	plt.plot(nlist,py_times)
