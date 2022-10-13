@@ -32,45 +32,55 @@ def time(n,func):
 		times.append(end-start)
 	return times
 
-def timeC(n):
-	times = []
-	f = Person(0)
-	for i in n:
-		start = pc()
-		f.set(i)
-		f.fib()
-		end = pc()
-		times.append(end-start)
-	return times
+# def timeC(n):
+# 	times = []
+# 	f = Person(0)
+# 	for i in n:
+# 		start = pc()
+# 		f.set(i)
+# 		f.fib()
+# 		end = pc()
+# 		times.append(end-start)
+# 	return times
 
 
 def main():
 	
-	nlist = [i for i in range(30,45)]
+	n = 47
 
-	py_times = []
-	num_times = []
-	cpp_times = []
+	print(time(n,fib_numba))
 
-	print('Starting fib_py')
-	py_times = time(nlist, fib_py)
-	print('Done')
+	f = Person(n)
+	print(f.fib)
 
-	print('Starting fib_numba')
-	num_times = time(nlist, fib_numba)
-	print('Done')
 
-	print('Starting fib_cpp')
-	cpp_times = timeC(nlist)
-	print('Done')
+	# nlist = [i for i in range(20,30)]
 
-	plt.plot(nlist,py_times)
-	plt.plot(nlist,num_times)
-	plt.plot(nlist,cpp_times)
-	plt.legend(['fib_py','fib_numba','fib_cpp'])
-	plt.xlabel('n')
-	plt.ylabel('Time [s]')
-	plt.savefig('Times')
+	# py_times = []
+	# num_times = []
+	# cpp_times = []
+
+	# print('Starting fib_py')
+	# py_times = time(nlist, fib_py)
+	# print('Done')
+
+	# print('Starting fib_numba')
+	# num_times = time(nlist, fib_numba)
+	# print('Done')
+
+	# # print('Starting fib_cpp')
+	# # cpp_times = timeC(nlist)
+	# # print('Done')
+
+	# plt.plot(nlist,py_times)
+	# plt.plot(nlist,num_times)
+	# # plt.plot(nlist,cpp_times)
+	# #plt.legend(['fib_py','fib_numba','fib_cpp'])
+	# plt.legend(['fib_py','fib_numba'])
+
+	# plt.xlabel('n')
+	# plt.ylabel('Time [s]')
+	# plt.savefig('Times2')
 
 
 
