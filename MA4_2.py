@@ -46,12 +46,11 @@ def time(n,func):
 
 def main():
 	
-	n = [47]
 
-	print(time(n,fib_numba))
+	print(fib_numba(47))
 
 	f = Person(47)
-	print(f.fib)
+	f.fib
 
 
 	# nlist = [i for i in range(20,30)]
