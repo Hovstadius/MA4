@@ -50,8 +50,7 @@ def main():
 	print(fib_numba(47))
 
 	f = Person(47)
-	f.fib
-
+	print(f.fib())
 
 	# nlist = [i for i in range(20,30)]
 
