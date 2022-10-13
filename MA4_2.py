@@ -29,7 +29,7 @@ def time(n,func):
 		start = pc()
 		func(i)
 		end = pc()
-		times += (end-start)
+		times.append(end-start)
 	return times
 
 
