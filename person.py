@@ -20,3 +20,11 @@ class Person(object):
         
 	def __del__(self):
 		return lib.Person_delete(self.obj)
+
+def fib_py(n):
+	if n <= 1:
+		return n
+	else:
+		return (fib_py(n-1) + fib_py(n-2))
+
+	
