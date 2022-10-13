@@ -46,7 +46,7 @@ def timeC(n):
 
 def main():
 	
-	nlist = [i for i in range(30,35)]
+	nlist = [i for i in range(30,45)]
 
 	py_times = []
 	num_times = []
